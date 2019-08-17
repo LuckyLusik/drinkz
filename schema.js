@@ -58,7 +58,9 @@ const IngredientType = new GraphQLObjectType({
         idDrink: { type: GraphQLString },
         idIngredient: { type: GraphQLString },
         strIngredient: { type: GraphQLString },
-        strDescription: { type: GraphQLString }
+        strDescription: { type: GraphQLString },
+        strType: { type: GraphQLString },
+        strIngredient1: { type: GraphQLString }
     })
 });
 
@@ -105,6 +107,22 @@ const RootQuery = new GraphQLObjectType({
             resolve(parent, args) {
                 return axios.get(`https://www.thecocktaildb.com/api/json/v1/1/search.php?i=${args.strIngredient}`)
                             .then(res => res.data.ingredients[0]);
+            }
+        },
+
+        list: {
+            type: new GraphQLList(IngredientType),
+            resolve(parent, args) {
+                return axios.get('https://www.thecocktaildb.com/api/json/v1/1/list.php?i=list')
+                            .then(res => res.data.drinks);
+            }
+        },
+
+        random: {
+            type: CocktailType,
+            resolve(parent, args) {
+                return axios.get('https://www.thecocktaildb.com/api/json/v1/1/random.php')
+                            .then(res => res.data.drinks[0]);
             }
         }
     }
