@@ -1,0 +1,19 @@
+$dark-color: #333E4B;
+$peach-color: #DD7A62;
+$light-peach-color: #FADDCD;
+$green-blue-color: #B2C7C2;
+
+body {
+    font-family: 'Raleway', "Droid Sans", "Helvetica Neue",
+      sans-serif;
+
+      .left-main {
+        background-color: $dark-color;
+        padding: 3.3vw;
+      }
+
+      .right-main {
+        background-color: $light-peach-color;
+        padding: 3.3vw;
+      }
+  }

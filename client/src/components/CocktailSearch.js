@@ -2,19 +2,13 @@ import React, { useState } from 'react';
 import { withRouter } from 'react-router-dom';
 
 function CocktailSearch(props) {
-    const [value, setValue] = useState('i.e. margarita');
+    const [value, setValue] = useState('');
     
     const onChange = event => setValue(event.target.value);
 
     const reDirect = () => { 
         setValue(''); 
         props.history.push(`/cocktails/${value}`);
-    };
-
-    const onClick = () => {
-        if(value === 'i.e. margarita') {
-            setValue(''); 
-        }
     };
 
     const keyPress = event => {
@@ -26,7 +20,7 @@ function CocktailSearch(props) {
     return (
         <div>
             <h4>Enter cocktail name</h4>
-            <input value={value} type="text" onChange={onChange} onKeyDown={keyPress} onClick={onClick}/>
+            <input placeholder="i.e. margarita" value={value} type="text" onChange={onChange} onKeyDown={keyPress} />
             <button onClick={reDirect}>Go for it!</button>
         </div>
     )
