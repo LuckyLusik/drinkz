@@ -4,8 +4,60 @@ $light-peach-color: #FADDCD;
 $green-blue-color: #B2C7C2;
 
 body {
-    font-family: 'Raleway', "Droid Sans", "Helvetica Neue",
-      sans-serif;
+    font-family: 'Raleway', "Droid Sans", "Helvetica Neue", sans-serif;
+
+      .MuiFormLabel-root {
+        color: $green-blue-color;
+        font-family: 'Raleway', "Droid Sans", "Helvetica Neue", sans-serif;
+        font-weight: 600;
+      }
+
+      .MuiFormControl-root:hover .MuiFormLabel-root {
+        color: $peach-color;
+      }
+
+      .MuiFormLabel-root.Mui-focused {
+        color: $peach-color;
+      }
+
+      .MuiFilledInput-root {
+        background-color: white;
+      }
+
+      .MuiFilledInput-root:hover {
+        background-color: white;
+      }
+
+      .MuiFilledInput-root.Mui-focused {
+        background-color: white;
+      }
+
+      .MuiFilledInput-underline:before {
+        border-bottom: 1px solid black;
+      }
+
+      .MuiFilledInput-underline:after {
+        border-bottom: 2px solid $peach-color;
+      }
+
+      .MuiFormHelperText-root {
+        color: #faddcd;
+        font-family: 'Raleway', "Droid Sans", "Helvetica Neue", sans-serif;
+        font-weight: 400;
+      }
+
+      .MuiFilledInput-adornedEnd {
+        padding-right: 4px;
+      }
+
+      .MuiIconButton-root {
+        color: $dark-color;
+      }
+
+      .MuiInputBase-root {
+        font-family: 'Raleway', "Droid Sans", "Helvetica Neue", sans-serif;
+        color: $dark-color;
+      }
 
       .left-main {
         background-color: $dark-color;

@@ -1,7 +1,33 @@
 import React, { useState } from 'react';
 import { withRouter } from 'react-router-dom';
 
+import clsx from 'clsx';
+import { makeStyles } from '@material-ui/core/styles';
+import IconButton from '@material-ui/core/IconButton';
+import InputAdornment from '@material-ui/core/InputAdornment';
+import TextField from '@material-ui/core/TextField';
+import SearchIcon from '@material-ui/icons/Search';
+import Divider from '@material-ui/core/Divider';
+
+const useStyles = makeStyles(theme => ({
+    margin: {
+      margin: 0,
+    },
+    textField: {
+      flexBasis: 200,
+    },
+    width: {
+        width: "100%",
+      },
+    divider: {
+    width: 1,
+    height: 28,
+    margin: 4,
+    },
+  }));
+
 function CocktailSearch(props) {
+    const classes = useStyles();
     const [value, setValue] = useState('');
     
     const onChange = event => setValue(event.target.value);
@@ -19,9 +45,24 @@ function CocktailSearch(props) {
     };
     return (
         <div>
-            <h4>Enter cocktail name</h4>
-            <input placeholder="i.e. margarita" value={value} type="text" onChange={onChange} onKeyDown={keyPress} />
-            <button onClick={reDirect}>Go for it!</button>
+            <TextField
+                id="filled-adornment-weight"
+                className={clsx(classes.margin, classes.textField, classes.width)}
+                variant="filled"
+                label="Enter a Cocktail Name"
+                value={value}
+                onChange={onChange}
+                onKeyDown={keyPress}
+                helperText="i.e. margarita"
+                InputProps={{
+                endAdornment: <InputAdornment position="end">
+                    <Divider className={classes.divider} />
+                    <IconButton  onClick={reDirect} className={classes.iconButton} aria-label="search">
+                        <SearchIcon />
+                    </IconButton>
+                </InputAdornment>,
+                }}
+            />
         </div>
     )
 }
