@@ -15,14 +15,12 @@ const useStyles = makeStyles(theme => ({
     },
     textField: {
       flexBasis: 200,
+      width: "100%"
     },
-    width: {
-        width: "100%",
-      },
     divider: {
-    width: 1,
-    height: 28,
-    margin: 4,
+        width: 1,
+        height: 28,
+        margin: 4,
     },
   }));
 
@@ -47,9 +45,9 @@ function CocktailSearch(props) {
         <div>
             <TextField
                 id="filled-adornment-weight"
-                className={clsx(classes.margin, classes.textField, classes.width)}
+                className={clsx(classes.margin, classes.textField, 'cocktail-name-field')}
                 variant="filled"
-                label="Enter a Cocktail Name"
+                label="Enter a Drink Name"
                 value={value}
                 onChange={onChange}
                 onKeyDown={keyPress}

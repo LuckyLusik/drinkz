@@ -3,8 +3,14 @@ $peach-color: #DD7A62;
 $light-peach-color: #FADDCD;
 $green-blue-color: #B2C7C2;
 
+html {
+  height: 100%;
+}
+
 body {
     font-family: 'Raleway', "Droid Sans", "Helvetica Neue", sans-serif;
+
+    .cocktail-name-field {
 
       .MuiFormLabel-root {
         color: $green-blue-color;
@@ -59,13 +65,132 @@ body {
         color: $dark-color;
       }
 
+    }
+
+    .ingredient-name-list {
+ 
+      .MuiFormLabel-root {
+        color: $light-peach-color;
+        font-size: 1rem;
+        font-family: 'Raleway', "Droid Sans", "Helvetica Neue", sans-serif;
+      }
+
+      .MuiInputBase-input {
+        font-family: 'Raleway', "Droid Sans", "Helvetica Neue", sans-serif;
+        background-color: white;
+        color: $dark-color;
+      }
+
+      .option-ingredient-list {
+        height: 1.5em;
+      }
+
+      .option-ingredient-list:hover {
+        background-color: $green-blue-color;
+      }
+
+      option.option-ingredient-list:checked {
+        background: -ms-linear-gradient(left, $peach-color 100%, $peach-color 100%);
+        background: -moz-linear-gradient(left, $peach-color 100%, $peach-color 100%);
+        background: -o-linear-gradient(left, $peach-color 100%, $peach-color 100%);
+        background: -webkit-linear-gradient(left, $peach-color 100%, $peach-color 100%);
+        background: linear-gradient($peach-color, $peach-color);
+        color: white;
+        background-color: $peach-color;
+        background-image: -webkit-linear-gradient(left, $peach-color 100%, $peach-color 100%);
+      }
+
+      label + .MuiInput-formControl {
+        margin-top: 24px;
+      }
+
+      .MuiSelect-select[multiple] {
+        height: 40vh;
+        padding: 10px;
+      }
+
+      .MuiInput-underline:before {
+        border-bottom: 1px solid black;
+    }
+
+      .MuiInput-underline:after {
+        border-bottom: 2px solid $peach-color;
+      }
+
+    }
+
       .left-main {
+        height: 100vh;
         background-color: $dark-color;
         padding: 3.3vw;
+
+        h4 {
+          color: $green-blue-color;
+          line-height: 1.5;
+          margin-bottom: 10px;
+        }
       }
 
       .right-main {
+        height: 100vh;
+        overflow-y: auto;
         background-color: $light-peach-color;
         padding: 3.3vw;
+
+        h1 {
+          font-weight: 900;
+          font-size: 3.5em;
+          color: $peach-color;
+          margin-top: 0em;
+        }
+
+        h4, .drinks-word {
+          font-weight: 500;
+          color: $dark-color;
+          margin-bottom: 0.1em;
+          font-family: 'Raleway', "Droid Sans", "Helvetica Neue", sans-serif;
+        }
+
+        .ingredient-description-title {
+          font-family: 'Raleway', "Droid Sans", "Helvetica Neue", sans-serif;
+          font-weight: 900;
+          font-size: 3.5em;
+          line-height: 1;
+          color: $peach-color;
+        }
+
+        .ingredient-description-body {
+          font-family: 'Raleway', "Droid Sans", "Helvetica Neue", sans-serif;
+          color: $dark-color;
+        }
+
+        .MuiPaper-elevation1 {
+          box-shadow: none;
+        }
+
+        .MuiPaper-root {
+          background-color: $light-peach-color;
+          border-bottom: 1px solid $dark-color;
+          margin-bottom: 3.3vh;
+        }
+
+        .MuiExpansionPanel-rounded:last-child {
+          border-bottom-left-radius: 0; 
+          border-bottom-right-radius: 0; 
+        }
+
+        .MuiExpansionPanel-root.Mui-expanded:last-child {
+          margin-bottom: 3.3vh;
+        }
+
+        .MuiBadge-colorPrimary {
+          color: #fff;
+          background-color: $peach-color;
+          font-family: 'Raleway', "Droid Sans", "Helvetica Neue", sans-serif;
+        }
+
+        .MuiExpansionPanelSummary-root {
+          padding: 0 24px 15px 24px;
+        }
       }
   }

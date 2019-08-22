@@ -5,7 +5,6 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import Cocktails from './components/Cocktails';
 import Cocktail from './components/Cocktail';
-import './App.scss';
 import CocktailSearch from './components/CocktailSearch';
 import RandomCocktail from './components/RandomCocktail';
 import IngredientSearch from './components/IngredientSearch';
@@ -14,6 +13,8 @@ import logo from './logo_03.png';
 
 import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
+
+import './App.scss';
 
 const client = new ApolloClient({
   uri: 'http://localhost:5000/graphql'
@@ -39,10 +40,9 @@ function App() {
           <Grid container spacing={0}>
             <Grid item xs={4} className="left-main">
               <Link to={'/'}>
-                <img src={logo} alt="Drinkz" style={{ width: '100%', display: 'block', margin: '3.3vw auto 6.6vw auto' }} />
+                <img src={logo} alt="Drinkz" style={{ width: '100%', display: 'block', margin: '3.3vh auto 6.6vh auto' }} />
               </Link>
               <CocktailSearch />
-              <h4>OR</h4>
               <IngredientSearch />
             </Grid>
             <Grid item xs={8} className="right-main">
