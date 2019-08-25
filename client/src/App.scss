@@ -105,7 +105,7 @@ body {
       }
 
       .MuiSelect-select[multiple] {
-        height: 40vh;
+        height: 42.5vh;
         padding: 10px;
       }
 
@@ -119,78 +119,139 @@ body {
 
     }
 
-      .left-main {
-        height: 100vh;
-        background-color: $dark-color;
-        padding: 3.3vw;
+    .cocktail-field-search {
+      .MuiTypography-body1 {
+        font-family: 'Raleway', "Droid Sans", "Helvetica Neue", sans-serif;
+        color: $dark-color;
+        background-color: $green-blue-color;
+        font-style: italic;
+      }
+    }
 
-        h4 {
-          color: $green-blue-color;
-          line-height: 1.5;
-          margin-bottom: 10px;
-        }
+    .one-drink {
+      background-color: white;
+      padding: 10px;
+      margin: 10px 5px;
+    }
+
+    .one-drink:hover .h4-800 {
+      color: $peach-color;
+    }
+
+    .one-drink a {
+      text-decoration: none;
+    }
+
+    .overflow-hidden {
+      overflow: hidden;
+    }
+
+    .left-main {
+      height: 100vh;
+      background-color: $dark-color;
+      padding: 2.7vh 3.3vw;
+
+      h4 {
+        color: $green-blue-color;
+        line-height: 1.5;
+        margin-bottom: 10px;
+      }
+    }
+
+    .right-main {
+      height: 100vh;
+      overflow-y: auto;
+      background-color: $light-peach-color;
+      padding: 2.7vh 3.3vw;
+
+      h1 {
+        font-weight: 900;
+        font-size: 3.5em;
+        color: $peach-color;
+        margin-top: 0em;
       }
 
-      .right-main {
-        height: 100vh;
-        overflow-y: auto;
+      h4, .drinks-word {
+        font-weight: 500;
+        color: $dark-color;
+        margin-bottom: 0.1em;
+        font-family: 'Raleway', "Droid Sans", "Helvetica Neue", sans-serif;
+      }
+
+      .h4-800 {
+        font-weight: 800;
+      }
+
+      .ingredient-description-title {
+        font-family: 'Raleway', "Droid Sans", "Helvetica Neue", sans-serif;
+        font-weight: 900;
+        font-size: 3.5em;
+        line-height: 1;
+        color: $peach-color;
+      }
+
+      .ingredient-description-body {
+        font-family: 'Raleway', "Droid Sans", "Helvetica Neue", sans-serif;
+        color: $dark-color;
+        line-height: 1.5;
+      }
+
+      .MuiButton-sizeLarge {
+        font-family: 'Raleway', "Droid Sans", "Helvetica Neue", sans-serif;
+        color: white;
+        border: 1px solid rgb(255, 255, 255);
+      }
+
+      .MuiPaper-elevation1 {
+        box-shadow: none;
+      }
+
+      .MuiPaper-root {
         background-color: $light-peach-color;
-        padding: 3.3vw;
-
-        h1 {
-          font-weight: 900;
-          font-size: 3.5em;
-          color: $peach-color;
-          margin-top: 0em;
-        }
-
-        h4, .drinks-word {
-          font-weight: 500;
-          color: $dark-color;
-          margin-bottom: 0.1em;
-          font-family: 'Raleway', "Droid Sans", "Helvetica Neue", sans-serif;
-        }
-
-        .ingredient-description-title {
-          font-family: 'Raleway', "Droid Sans", "Helvetica Neue", sans-serif;
-          font-weight: 900;
-          font-size: 3.5em;
-          line-height: 1;
-          color: $peach-color;
-        }
-
-        .ingredient-description-body {
-          font-family: 'Raleway', "Droid Sans", "Helvetica Neue", sans-serif;
-          color: $dark-color;
-        }
-
-        .MuiPaper-elevation1 {
-          box-shadow: none;
-        }
-
-        .MuiPaper-root {
-          background-color: $light-peach-color;
-          border-bottom: 1px solid $dark-color;
-          margin-bottom: 3.3vh;
-        }
-
-        .MuiExpansionPanel-rounded:last-child {
-          border-bottom-left-radius: 0; 
-          border-bottom-right-radius: 0; 
-        }
-
-        .MuiExpansionPanel-root.Mui-expanded:last-child {
-          margin-bottom: 3.3vh;
-        }
-
-        .MuiBadge-colorPrimary {
-          color: #fff;
-          background-color: $peach-color;
-          font-family: 'Raleway', "Droid Sans", "Helvetica Neue", sans-serif;
-        }
-
-        .MuiExpansionPanelSummary-root {
-          padding: 0 24px 15px 24px;
-        }
+        border-bottom: 1px solid $dark-color;
+        margin-bottom: 3.3vh;
       }
-  }
+
+      .MuiExpansionPanel-rounded:last-child {
+        border-bottom-left-radius: 0; 
+        border-bottom-right-radius: 0; 
+      }
+
+      .MuiExpansionPanel-root.Mui-expanded:last-child {
+        margin-bottom: 3.3vh;
+      }
+
+      .MuiBadge-colorPrimary {
+        color: #fff;
+        background-color: $peach-color;
+        font-family: 'Raleway', "Droid Sans", "Helvetica Neue", sans-serif;
+      }
+
+      .MuiExpansionPanelSummary-root {
+        padding: 0 24px 15px 24px;
+      }
+
+      .ingredients-list-flex-container {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        -ms-box-orient: horizontal;
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -moz-flex;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-flex-direction: row; 
+        flex-direction: row;
+        list-style-type: none;
+        justify-content: space-around;
+      }
+
+      .wrap    { 
+        -webkit-flex-wrap: wrap;
+        flex-wrap: wrap;
+      } 
+      
+    }
+}

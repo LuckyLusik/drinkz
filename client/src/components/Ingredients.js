@@ -44,11 +44,19 @@ export default function Ingredients({ match: { params: { strIngredient }}}) {
                     <Typography className={clsx(classes.padding, 'drinks-word')}>Drinks</Typography>
                 </Badge>  
             </div>
-            {
-                data.ingredients.map(ingredient => (
-                    <IngredientItem key={ingredient.idDrink} searchDrink={searchDrink} cocktail={ingredient}/>
-                ))
-            }
+            <ul className="ingredients-list-flex-container wrap">
+                {
+                    data.ingredients.map(ingredient => (
+                        <li key={ingredient.idDrink+10} className="flex-item one-drink">
+                            <IngredientItem 
+                                key={ingredient.idDrink} 
+                                searchDrink={searchDrink} 
+                                cocktail={ingredient}
+                            />
+                        </li>
+                    ))
+                }
+            </ul>
         </Fragment>
     )
 }
