@@ -1,12 +1,13 @@
 import React, { Fragment } from 'react';
 import gql from 'graphql-tag';
 import { useQuery } from '@apollo/react-hooks';
-import { Link } from 'react-router-dom';
+import { withRouter } from 'react-router-dom';
 
 import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import Button from '@material-ui/core/Button';
 import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
+import NotFoundPage from './NotFoundPage';
 
 const COCKTAIL_QUERY = gql`
   query CocktailQuery($idDrink: String) {
@@ -62,11 +63,11 @@ const useStyles = makeStyles(theme => ({
     },
   }));
 
-export default function Cocktail({ match: { params: { idDrink }}, location: { aboutProps: { searchDrink } }}) {
+function Cocktail({ match: { params: { idDrink }}, history }) {
     const classes = useStyles();
     const { data, loading, error } = useQuery(COCKTAIL_QUERY, { variables: { idDrink } });
     if (loading) return <h4>Loading...</h4>;
-    if (error) console.log(error);
+    if (error) return <NotFoundPage />;
     const {
         strDrink,
         strDrinkThumb,
@@ -115,12 +116,10 @@ export default function Cocktail({ match: { params: { idDrink }}, location: { ab
                         <p className='ingredient-description-body'>{strInstructions}</p>
                     </Grid>
                     <Grid item xs={12}>
-                        <Link to={`${searchDrink}`} style={{ textDecoration: 'none' }}>
-                        <Button variant="outlined" size="large" color="primary" className={classes.margin}>
+                        <Button onClick={() => history.goBack()} variant="outlined" size="large" color="primary" className={classes.margin}>
                             <ArrowBackIosIcon className={classes.leftIcon} />
                             Back
                         </Button>
-                        </Link>
                     </Grid>
                 </Grid>
             </div>
@@ -128,3 +127,4 @@ export default function Cocktail({ match: { params: { idDrink }}, location: { ab
     )
 }
 
+export default withRouter(Cocktail);

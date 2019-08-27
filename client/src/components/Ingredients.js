@@ -3,11 +3,13 @@ import gql from 'graphql-tag';
 import { useQuery } from '@apollo/react-hooks';
 import IngredientItem from './IngredientItem';
 import IngredientDetails from './IngredientDetails';
+import NoCocktails from './NoCocktails';
 
 import Badge from '@material-ui/core/Badge';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import clsx from 'clsx';
+import NotFoundPage from './NotFoundPage';
 
 const useStyles = makeStyles(theme => ({
     margin: {
@@ -34,8 +36,8 @@ export default function Ingredients({ match: { params: { strIngredient }}}) {
     const classes = useStyles();
     let searchDrink = strIngredient;
     const { data, loading, error } = useQuery(INGREDIENTS_QUERY, { variables: { strIngredient } });
-    if (loading) return <h4>Loading...</h4>;
-    if (error) console.log(error);
+    if (loading) return <NotFoundPage />;
+    if (error) return <NoCocktails searchDrink={searchDrink}/>;
     return (
         <Fragment>
             <IngredientDetails strIngredient={strIngredient}/>
