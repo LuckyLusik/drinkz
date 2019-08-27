@@ -1,7 +1,7 @@
 import React from 'react';
 import ApolloClient from 'apollo-boost';
 import { ApolloProvider } from '@apollo/react-hooks';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import Cocktails from './components/Cocktails';
 import Cocktail from './components/Cocktail';
@@ -9,6 +9,7 @@ import CocktailSearch from './components/CocktailSearch';
 import RandomCocktail from './components/RandomCocktail';
 import IngredientSearch from './components/IngredientSearch';
 import Ingredients from './components/Ingredients';
+import NotFoundPage from './components/NotFoundPage';
 import logo from './logo_03.png';
 
 import { makeStyles } from '@material-ui/core/styles';
@@ -41,10 +42,13 @@ function App() {
               <IngredientSearch />
             </Grid>
             <Grid item xs={8} className="right-main">
+            <Switch>
               <Route exact path='/' component={RandomCocktail}></Route>
               <Route exact path='/cocktails/:strDrink' component={Cocktails}></Route>
               <Route exact path='/cocktail/:idDrink' component={Cocktail}></Route>
               <Route exact path='/ingredients/:strIngredient' component={Ingredients}></Route>
+              <Route component={NotFoundPage} />
+            </Switch>
             </Grid>
           </Grid>
         </div>

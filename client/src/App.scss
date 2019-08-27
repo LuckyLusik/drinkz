@@ -146,6 +146,14 @@ body {
       overflow: hidden;
     }
 
+    .diCaprio {
+      font-family: 'Raleway', "Droid Sans", "Helvetica Neue", sans-serif;
+      font-size: 2em;
+      color: $dark-color;
+      margin: 1em 0;
+      text-align: center;
+    }
+
     .left-main {
       height: 100vh;
       background-color: $dark-color;
