@@ -46,7 +46,9 @@ function IngredientSearch(props) {
 
     const onClick = (n) => {
         if( n === 'A\u00f1ejo rum') {
-            n = 'Anejo rum'
+            n = 'Anejo rum';
+        } else if( n === 'J\u00E4germeister'){
+            n = 'Jagermeister';
         }
         props.history.push(`/ingredients/${n}`);
     };
@@ -71,7 +73,13 @@ function IngredientSearch(props) {
                     }}
                 >
                 {data.list.map(name => (
-                    <option css={css`color: 'white'; &:checked { background-color: #DD7A62; }`} className='option-ingredient-list' key={name.strIngredient1 + 10} value={name.strIngredient1} onClick={() => onClick(name.strIngredient1)}>
+                    <option 
+                        css={css`color: 'white'; &:checked { background-color: #DD7A62; }`} 
+                        className='option-ingredient-list' 
+                        key={name.strIngredient1 + 10} 
+                        value={name.strIngredient1} 
+                        onClick={() => onClick(name.strIngredient1)}
+                    >
                         {name.strIngredient1}
                     </option>
                 ))}

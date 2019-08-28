@@ -7,14 +7,18 @@
     "@emotion/core": "^10.0.16",
     "@material-ui/core": "^4.3.2",
     "@material-ui/icons": "^4.2.1",
+    "@zendeskgarden/react-loaders": "^6.2.0",
+    "@zendeskgarden/react-theming": "^6.2.0",
     "apollo-boost": "^0.4.4",
     "graphql": "^14.4.2",
     "node-sass": "^4.12.0",
+    "prop-types": "^15.7.2",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
     "react-router-dom": "^5.0.1",
     "react-scripts": "3.1.0",
-    "react-tilt": "^0.1.4"
+    "react-tilt": "^0.1.4",
+    "styled-components": "^4.3.2"
   },
   "scripts": {
     "start": "react-scripts start",

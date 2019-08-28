@@ -9,7 +9,6 @@ import Badge from '@material-ui/core/Badge';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import clsx from 'clsx';
-import NotFoundPage from './NotFoundPage';
 
 const useStyles = makeStyles(theme => ({
     margin: {
@@ -36,11 +35,14 @@ export default function Ingredients({ match: { params: { strIngredient }}}) {
     const classes = useStyles();
     let searchDrink = strIngredient;
     const { data, loading, error } = useQuery(INGREDIENTS_QUERY, { variables: { strIngredient } });
-    if (loading) return <NotFoundPage />;
+    if (loading) return <h4>Loading...</h4>;
     if (error) return <NoCocktails searchDrink={searchDrink}/>;
+    if(searchDrink === "Bailey's irish cream") {
+        searchDrink = "Baileys irish cream";
+    }
     return (
         <Fragment>
-            <IngredientDetails strIngredient={strIngredient}/>
+            <IngredientDetails strIngredient={searchDrink}/>
             <div>
                 <Badge color="primary" badgeContent={data.ingredients.length} className={classes.margin}>
                     <Typography className={clsx(classes.padding, 'drinks-word')}>Drinks</Typography>

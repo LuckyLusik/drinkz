@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 import Tilt from 'react-tilt';
+import Tooltip from '@material-ui/core/Tooltip';
 
 export default function CocktailItem({ cocktail: { idDrink, strDrink, strDrinkThumb }, searchDrink}) {
     searchDrink = `/cocktails/${searchDrink}`
@@ -16,7 +17,9 @@ export default function CocktailItem({ cocktail: { idDrink, strDrink, strDrinkTh
                     </div>
                 </Tilt>
             </div>
-            <h4 className='h4-800'>{ strDrink }</h4>
+            <Tooltip title={ strDrink } aria-label="Drink">
+                <h4 className='h4-800 noWrap'>{ strDrink }</h4>
+            </Tooltip>
         </Link>
     )
 }

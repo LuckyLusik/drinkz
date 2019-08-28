@@ -35,6 +35,13 @@ export default function IngredientDetails({ strIngredient }) {
         strDescription,
         strType
     } = data.ingredient;
+    if(strIngredient === "Baileys irish cream") {
+        strIngredient = "Bailey's irish cream";
+    } else if( strIngredient === 'Jagermeister'){
+        strIngredient = 'J\u00E4germeister';
+    } else if( strIngredient === 'Anejo rum') {
+        strIngredient = 'A\u00f1ejo rum';
+    }
     return (
         <Fragment>
             <h4>Ingredient: <i style={{ color: '#DD7A62'}}>{strType}</i></h4>

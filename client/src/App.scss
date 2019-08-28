@@ -128,10 +128,18 @@ body {
       }
     }
 
+    .noWrap {
+      white-space: nowrap; 
+      width: 190px; 
+      overflow: hidden;
+      text-overflow: ellipsis; 
+    }
+
     .one-drink {
       background-color: white;
       padding: 10px;
       margin: 10px 5px;
+      width: 190px;
     }
 
     .one-drink:hover .h4-800 {
