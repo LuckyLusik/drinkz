@@ -93,20 +93,20 @@ function Cocktail({ match: { params: { idDrink }}, history }) {
             <div className={classes.root}>
                 <Grid container spacing={0}>
                     <Grid item xs={12}>
-                        <h4>Drink: <i style={{ color: '#DD7A62' }}>{ strAlcoholic }</i></h4>
+                        <h4 className='margin-t'>Drink: <i style={{ color: '#DD7A62' }}>{ strAlcoholic }</i></h4>
                     </Grid>
                     <Grid item xs={12}>
                         <div className='ingredient-description-title' style={{ margin: '29px 0' }}>{strDrink}</div>
                     </Grid>
-                    <Grid item xs={7}>
-                        <img src={strDrinkThumb} alt="Cocktail" style={{ width: '100%', height: 'auto'}}></img>
+                    <Grid item xs={12} sm={7}>
+                        <img className='margin-b-20' src={strDrinkThumb} alt="Cocktail" style={{ width: '100%', height: 'auto'}}></img>
                     </Grid>
-                    <Grid item xs={5}>
-                        <h4 className='h4-800' style={{ marginLeft: '2.7vw', marginTop: 0 }}>Ingredients:</h4>
+                    <Grid className='margin-l' item xs={12} sm={5}>
+                        <h4 className='h4-800' style={{ marginTop: 0 }}>Ingredients:</h4>
                         <div>
                             {
                                 ingredientsList.map(ingSingle => (
-                                    <p style={{ marginLeft: '2.7vw', color: '#333e4b'}}key={ ingSingle + 1000 }>{ ingSingle }</p>
+                                    <p style={{ color: '#333e4b'}}key={ ingSingle + 1000 }>{ ingSingle }</p>
                                 ))
                             }
                         </div>

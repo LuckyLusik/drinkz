@@ -64,6 +64,7 @@ function CocktailSearch(props) {
     };
     return (
         <div>
+            <h4 className='label-text'>Enter a Drink Name:</h4>
             <TextField
                 id="filled-adornment-weight"
                 className={clsx(classes.margin, classes.textField, 'cocktail-name-field')}

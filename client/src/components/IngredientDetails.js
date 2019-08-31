@@ -44,7 +44,7 @@ export default function IngredientDetails({ strIngredient }) {
     }
     return (
         <Fragment>
-            <h4>Ingredient: <i style={{ color: '#DD7A62'}}>{strType}</i></h4>
+            <h4 className='margin-t'>Ingredient: <i style={{ color: '#DD7A62'}}>{strType}</i></h4>
             <div className={classes.root}>
                 <ExpansionPanel>
                     <ExpansionPanelSummary

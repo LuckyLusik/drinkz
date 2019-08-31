@@ -16,6 +16,7 @@ body {
         color: $green-blue-color;
         font-family: 'Raleway', "Droid Sans", "Helvetica Neue", sans-serif;
         font-weight: 600;
+        width: 70%;
       }
 
       .MuiFormControl-root:hover .MuiFormLabel-root {
@@ -83,6 +84,10 @@ body {
 
       .option-ingredient-list {
         height: 1.5em;
+        white-space: nowrap;
+        width: 90%;
+        overflow: hidden;
+        text-overflow: ellipsis;
       }
 
       .option-ingredient-list:hover {
@@ -138,7 +143,7 @@ body {
     .one-drink {
       background-color: white;
       padding: 10px;
-      margin: 10px 5px;
+      margin: 5px 5px;
       width: 190px;
     }
 
@@ -174,6 +179,19 @@ body {
       }
     }
 
+    .left-slide-mobile {
+      display: none;
+      padding: 5px;
+    }
+
+    .left-slide-desktop {
+      display: block;
+    }
+
+    .label-text {
+      display: none;
+    }
+
     .right-main {
       height: 100vh;
       overflow-y: auto;
@@ -198,10 +216,14 @@ body {
         font-weight: 800;
       }
 
+      .margin-l {
+        padding-left: 2.7vw;
+      }
+
       .ingredient-description-title {
         font-family: 'Raleway', "Droid Sans", "Helvetica Neue", sans-serif;
         font-weight: 900;
-        font-size: 3.5em;
+        font-size: 5vw;
         line-height: 1;
         color: $peach-color;
       }
@@ -261,7 +283,7 @@ body {
         -webkit-flex-direction: row; 
         flex-direction: row;
         list-style-type: none;
-        justify-content: space-around;
+        justify-content: center;
       }
 
       .wrap    { 
@@ -270,4 +292,99 @@ body {
       } 
       
     }
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+
+  h4.margin-t {
+    margin-top: 0;
+  }
+
+  img.margin-b-20 {
+    margin-bottom: 20px;
+  }
+
+  body .right-main .margin-l {
+    padding-left: 0;
+    margin-bottom: 20px;
+  }
+
+  body .right-main .ingredient-description-title {
+    font-size: 10vw;
+  }
+
+  body .ingredient-name-list .MuiSelect-select[multiple] {
+    height: 31vh;
+  }
+
+  body .left-slide-mobile {
+    display: block;
+  }
+
+  body .left-slide-desktop {
+    display: none;
+  }
+
+  body .sandwich {
+    .MuiButton-text {
+      color: $light-peach-color;
+      padding: 6px 5px;
+    }
+
+    .MuiSvgIcon-root {
+      font-size: 1.8rem;
+      min-width: 30px;
+    }
+
+    .MuiButton-label {
+      justify-content: normal;
+    }
+
+    .MuiButton-root {
+      min-width: 30px;
+      display: flex;
+      margin: 0 auto;
+    }
+  }
+} 
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 601px) and (max-width: 767px) {
+  body .label-text {
+    display: block;
+  }
+
+  body .ingredient-name-list .MuiSelect-select[multiple] {
+    height: 38vh;
+  }
+
+  body .cocktail-name-field .MuiFormLabel-root {
+    display: none;
+  }
+
+  body .right-main .ingredient-description-title {
+    font-size: 7vw;
+  }
+} 
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  body .cocktail-name-field .MuiFormLabel-root {
+    font-size: 14px;
+  }
+
+  body .right-main .ingredient-description-title {
+    font-size: 7vw;
+  }
+} 
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  
+} 
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  
 }
