@@ -1,4 +1,5 @@
 # Drinkz
+
 Drinkz is a simple web tool to help to find different alcoholic and non alcoholic drink recipes. You just need to enter a drink name (or part of the name) or to choose a drink ingredient from the list.
 
 ## Getting Started
@@ -32,5 +33,35 @@ Drinkz is a simple web tool to help to find different alcoholic and non alcoholi
 ## Final Product
 
 On connection you will receive a recipe of the random drink: 
+
 ![On connection](images/home-page.png)
+
+
+You need to enter a drink name (or part of the name) into a search field:
+
+![Search a drink](images/drink-name.png)
+
+
+You will receive a list of drinks:
+
+![A list of drinks](images/drink-name-results.png)
+
+
+After clicking one of them you will receive a drink recipe:
+
+![Drink recipe](images/drink-recipe.png)
+
+
+Also you can search by ingredients:
+
+![Search by ingredients](images/ingredient-search.png)
+
+
+And you can see the ingredient description:
+![Ingredient description](images/ingredient-details.png)
+
+
+This app is responsive (mobile version):
+![Mobile version](images/mobile-version.png)
+
 
