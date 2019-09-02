@@ -19,7 +19,7 @@ import Grid from '@material-ui/core/Grid';
 import './App.scss';
 
 const client = new ApolloClient({
-  uri: 'http://localhost:5000/graphql'
+  uri: '/graphql'
 });
 
 const useStyles = makeStyles(theme => ({
