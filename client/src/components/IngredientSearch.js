@@ -55,18 +55,6 @@ function IngredientSearch(props) {
     const { data, loading, error } = useQuery(LIST_QUERY);
     if (loading) return <h4>Loading...</h4>;
     if (error) console.log(error);
-    const ingredientsList = data.list.map(name => (
-            <option 
-                css={css`color: 'white'; &:checked { background-color: #DD7A62; }`} 
-                className='option-ingredient-list' 
-                key={name.strIngredient1 + 10} 
-                value={name.strIngredient1} 
-                onClick={() => onClick(name.strIngredient1)}
-            >
-                {name.strIngredient1}
-            </option>
-        ));
-    
     return (
         <div>
             <h4>OR</h4>
@@ -84,8 +72,17 @@ function IngredientSearch(props) {
                         id: 'select-multiple-native',
                     }}
                 >
-                {ingredientsList}
-                {alert(data.list)}
+                {data.list.map(name => (
+                    <option 
+                        css={css`color: 'white'; &:checked { background-color: #DD7A62; }`} 
+                        className='option-ingredient-list' 
+                        key={name.strIngredient1 + 10} 
+                        value={name.strIngredient1} 
+                        onClick={() => onClick(name.strIngredient1)}
+                    >
+                        {name.strIngredient1}
+                    </option>
+                ))}
                 </Select>
             </FormControl>
         </div>
