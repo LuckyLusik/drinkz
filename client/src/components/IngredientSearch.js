@@ -85,7 +85,7 @@ function IngredientSearch(props) {
                     }}
                 >
                 {ingredientsList}
-                {alert(data.list.strIngredient1)}
+                {alert(data.list)}
                 </Select>
             </FormControl>
         </div>
