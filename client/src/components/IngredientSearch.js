@@ -73,6 +73,19 @@ function IngredientSearch(props) {
                     }}
                 >
                 {data.list.map(name => (
+                    <option 
+                        css={css`color: 'white'; &:checked { background-color: #DD7A62; }`} 
+                        className='option-ingredient-list' 
+                        key={name.strIngredient1 + 10} 
+                        value={name.strIngredient1} 
+                        onClick={() => onClick(name.strIngredient1)}
+                    >
+                        {name.strIngredient1}
+                    </option>
+                ))}
+                </Select>
+                <div>
+                {data.list.map(name => (
                     <p
                         css={css`color: 'white'; &:checked { background-color: #DD7A62; }`} 
                         className='option-ingredient-list' 
@@ -83,7 +96,7 @@ function IngredientSearch(props) {
                         {name.strIngredient1}
                     </p>
                 ))}
-                </Select>
+                </div>
             </FormControl>
         </div>
     )
