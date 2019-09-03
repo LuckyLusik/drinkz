@@ -169,6 +169,8 @@ body {
 
     .left-main {
       height: 100vh;
+      overflow-y: scroll;
+      -webkit-overflow-scrolling: touch;
       background-color: $dark-color;
       padding: 2.7vh 3.3vw;
 
