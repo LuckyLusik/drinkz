@@ -5,7 +5,7 @@
   "dependencies": {
     "@apollo/react-hooks": "^3.0.0",
     "@emotion/core": "^10.0.16",
-    "@material-ui/core": "^4.3.2",
+    "@material-ui/core": "^4.4.0",
     "@material-ui/icons": "^4.2.1",
     "@zendeskgarden/react-loaders": "^6.2.0",
     "@zendeskgarden/react-theming": "^6.2.0",
