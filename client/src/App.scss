@@ -69,6 +69,10 @@ body {
     }
 
     .ingredient-name-list {
+
+      .MuiFormControl-root {
+        margin: 0 0 3.3vh 0;
+      }
  
       .MuiFormLabel-root {
         color: $light-peach-color;
@@ -168,9 +172,7 @@ body {
     }
 
     .left-main {
-      height: 100vh;
-      overflow-y: scroll;
-      -webkit-overflow-scrolling: touch;
+      height: 100%;
       background-color: $dark-color;
       padding: 2.7vh 3.3vw;
 
