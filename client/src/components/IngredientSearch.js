@@ -58,7 +58,7 @@ function IngredientSearch(props) {
     return (
         <div>
             <h4>OR</h4>
-            <h4>Choose a Drink Ingredient from the List Below:</h4>
+            <h4>Choose a Drink Ingredient from the List of <i style={{ color: '#DD7A62'}}>{data.list.length}</i> Below:</h4>
             <FormControl className={clsx(classes.formControl, 'ingredient-name-list')}>
                 <InputLabel shrink htmlFor="select-multiple-native">
                     Ingredients

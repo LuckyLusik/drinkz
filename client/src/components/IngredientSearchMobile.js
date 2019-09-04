@@ -8,7 +8,7 @@ import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles(theme => ({
     formControl: {
-      margin: '0 0 3.3vh 0',
+      margin: 0,
       minWidth: 120,
       maxWidth: '100%',
       padding: 12,
@@ -42,7 +42,7 @@ function IngredientSearchMobile(props) {
     return (
         <div>
             <h4>OR</h4>
-            <h4>Choose a Drink Ingredient from the List Below:</h4>
+            <h4>Choose a Drink Ingredient from the List of <i style={{ color: '#DD7A62'}}>{data.list.length}</i> Below:</h4>
             <ul className={clsx(classes.formControl, 'ingredient-name-list')}>
                 {data.list.map(name => (
                     <li 
