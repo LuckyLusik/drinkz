@@ -2,6 +2,10 @@
 
 Drinkz is a simple web tool to help to find different alcoholic and non alcoholic drink recipes. You just need to enter a drink name (or part of the name) or to choose a drink ingredient from the list.
 
+## Live Demo
+
+https://pure-meadow-16203.herokuapp.com/
+
 ## Getting Started
 
 1. Install dependencies (using the npm install command).
