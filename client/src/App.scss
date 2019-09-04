@@ -73,10 +73,11 @@ body {
       overflow-y: scroll;
       -webkit-overflow-scrolling: touch;
       height: 30vh;
-    }
 
-    li.option-ingredient-list {
-      color: $dark-color;
+      li.option-ingredient-list {
+        color: $dark-color;
+        height: 2.5em;
+      }
     }
 
     .ingredient-name-list {
@@ -310,6 +311,7 @@ body {
     }
 }
 
+
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
 
@@ -403,4 +405,10 @@ body {
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
   
+}
+
+@media only screen and (max-width: 750px) {
+  body .ingredient-name-list .MuiSelect-select[multiple] {
+    height: 24vh;
+  }
 }
