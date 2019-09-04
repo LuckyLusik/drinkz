@@ -84,19 +84,6 @@ function IngredientSearch(props) {
                     </option>
                 ))}
                 </Select>
-                <div>
-                {data.list.map(name => (
-                    <p
-                        css={css`color: 'white'; &:checked { background-color: #DD7A62; }`} 
-                        className='option-ingredient-list' 
-                        key={name.strIngredient1 + 10} 
-                        value={name.strIngredient1} 
-                        onClick={() => onClick(name.strIngredient1)}
-                    >
-                        {name.strIngredient1}
-                    </p>
-                ))}
-                </div>
             </FormControl>
         </div>
     )

@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 import MenuIcon from '@material-ui/icons/Menu';
 import CocktailSearch from './CocktailSearch';
 import IngredientSearch from './IngredientSearch';
+import IngredientSearchMobile from './IngredientSearchMobile';
 import logo from '../logo_03.png';
 
 export default function LeftSlideMobile() {
@@ -13,12 +14,13 @@ export default function LeftSlideMobile() {
     const toggleDrawer = (open) => event => {
         if (event 
             && (event.type === 'keydown' || event.type === 'mousedown' || event.type === 'click') 
-            && (event.target.id === 'filled-adornment-weight' && event.target.tagName.toUpperCase() === 'INPUT')) {
+            && (event.target.id === 'filled-adornment-weight' && event.target.tagName.toUpperCase() === 'INPUT')) 
+            {
                 if(event.which === 13 || event.keyCode === 13) {
                     setState(open);
                 } else {
                     return;
-                }
+            }
         } 
         setState(open);
     };
@@ -33,7 +35,9 @@ export default function LeftSlideMobile() {
                 <img src={logo} alt="Drinkz" style={{ width: '100%', display: 'block', margin: '3.3vh auto 6.6vh auto' }} />
             </Link>
             <CocktailSearch />
-            <IngredientSearch />
+            <div className='left-slide-desktop' ><IngredientSearch /></div>
+            <div className='left-slide-mobile' ><IngredientSearchMobile /></div>
+            
         </div>
       );
 

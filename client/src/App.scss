@@ -68,6 +68,17 @@ body {
 
     }
 
+
+    ul.ingredient-name-list {
+      overflow-y: scroll;
+      -webkit-overflow-scrolling: touch;
+      height: 34.3vh;
+    }
+
+    li.option-ingredient-list {
+      color: $dark-color;
+    }
+
     .ingredient-name-list {
 
       .MuiFormControl-root {
