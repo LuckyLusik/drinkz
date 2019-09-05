@@ -4,7 +4,6 @@ import Button from '@material-ui/core/Button';
 import { Link } from 'react-router-dom';
 import MenuIcon from '@material-ui/icons/Menu';
 import CocktailSearch from './CocktailSearch';
-import IngredientSearch from './IngredientSearch';
 import IngredientSearchMobile from './IngredientSearchMobile';
 import logo from '../logo_03.png';
 
@@ -35,9 +34,7 @@ export default function LeftSlideMobile() {
                 <img src={logo} alt="Drinkz" style={{ width: '100%', display: 'block', margin: '3.3vh auto 6.6vh auto' }} />
             </Link>
             <CocktailSearch />
-            <div className='left-slide-desktop' ><IngredientSearch /></div>
-            <div className='left-slide-mobile' ><IngredientSearchMobile /></div>
-            
+            <IngredientSearchMobile />
         </div>
       );
 

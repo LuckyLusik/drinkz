@@ -72,11 +72,17 @@ body {
     ul.ingredient-name-list {
       overflow-y: scroll;
       -webkit-overflow-scrolling: touch;
-      height: 30vh;
+      height: 42.5vh;
 
       li.option-ingredient-list {
+        -moz-box-sizing: border-box; 
+        -webkit-box-sizing: border-box; 
+        box-sizing: border-box; 
         color: $dark-color;
+        padding: 10px;
+        width: 100%;
         height: 2.5em;
+        cursor: pointer;
       }
     }
 
@@ -332,7 +338,7 @@ body {
     font-size: 10vw;
   }
 
-  body .ingredient-name-list .MuiSelect-select[multiple] {
+  body ul.ingredient-name-list {
     height: 31vh;
   }
 
@@ -373,7 +379,7 @@ body {
     display: block;
   }
 
-  body .ingredient-name-list .MuiSelect-select[multiple] {
+  body ul.ingredient-name-list {
     height: 38vh;
   }
 
@@ -407,8 +413,8 @@ body {
   
 }
 
-@media only screen and (max-width: 750px) {
-  body .ingredient-name-list .MuiSelect-select[multiple] {
+@media only screen and (max-height: 750px) {
+  body ul.ingredient-name-list {
     height: 24vh;
   }
 }

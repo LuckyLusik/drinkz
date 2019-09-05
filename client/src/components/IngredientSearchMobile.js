@@ -26,8 +26,10 @@ const LIST_QUERY = gql`
 
 function IngredientSearchMobile(props) {
     const classes = useStyles();
+    const [ingredientName, setIngredientName] = React.useState('');
 
     const onClick = (n) => {
+        setIngredientName(n);
         if( n === 'A\u00f1ejo rum') {
             n = 'Anejo rum';
         } else if( n === 'J\u00E4germeister'){
@@ -46,7 +48,8 @@ function IngredientSearchMobile(props) {
             <ul className={clsx(classes.formControl, 'ingredient-name-list')}>
                 {data.list.map(name => (
                     <li 
-                        className='option-ingredient-list' 
+                        style={{ backgroundColor: ingredientName === name.strIngredient1 ? '#DD7A62': '', color: ingredientName === name.strIngredient1 ? 'white' : '' }}
+                        className="option-ingredient-list" 
                         key={name.strIngredient1 + 10} 
                         data-id={name.strIngredient1}
                         onClick={() => onClick(name.strIngredient1)}

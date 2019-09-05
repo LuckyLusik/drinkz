@@ -7,7 +7,7 @@ import Cocktails from './components/Cocktails';
 import Cocktail from './components/Cocktail';
 import CocktailSearch from './components/CocktailSearch';
 import RandomCocktail from './components/RandomCocktail';
-import IngredientSearch from './components/IngredientSearch';
+import IngredientSearchMobile from './components/IngredientSearchMobile';
 import Ingredients from './components/Ingredients';
 import NotFoundPage from './components/NotFoundPage';
 import LeftSlideMobile from './components/LeftSlideMobile';
@@ -52,7 +52,7 @@ function App() {
                 <img src={logo} alt="Drinkz" style={{ width: '100%', display: 'block', margin: '3.3vh auto 6.6vh auto' }} />
               </Link>
               <CocktailSearch />
-              <IngredientSearch />
+              <IngredientSearchMobile />
             </Grid>
             <Grid item xs={8} className="right-main left-slide-desktop">
               <Switch>
